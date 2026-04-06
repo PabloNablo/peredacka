@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Корочки.Есть</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/footer.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .team-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Шапка -->
+    <nav class="navbar bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="logo flex items-center text-2xl font-bold text-blue-600">
+                    <span class="p-2 rounded-lg mr-2" style="padding: 0;" font-size="30px;">📖</span>
+                    Корочки.Есть
+                </a>
+                <div class="nav-links flex space-x-6">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Главная</a>
+                    <a href="new-application.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Курсы</a>
+                    <a href="about.html" class="nav-link text-blue-600 font-medium border-b-2 border-blue-600">О нас</a>
+                </div>
+                <div id="authSection" class="auth-buttons flex space-x-4">
+                    <!-- Будет заполнено через JavaScript -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <!-- Герой-секция -->
+        <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">О нашей образовательной платформе</h1>
+                <p class="text-xl max-w-2xl mx-auto mb-8 opacity-90">
+                    Мы создаем будущее образования, объединяя лучшие курсы, экспертов и технологии для вашего профессионального роста
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="new-application.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
+                        Начать обучение
+                    </a>
+                    <a href="#contact" class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition duration-300">
+                        Связаться с нами
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статистика -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="stat-card bg-blue-50 p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">10,000+</div>
+                        <div class="text-gray-600">Студентов</div>
+                    </div>
+                    <div class="stat-card bg-green-50 p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">150+</div>
+                        <div class="text-gray-600">Курсов</div>
+                    </div>
+                    <div class="stat-card bg-purple-50 p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">95%</div>
+                        <div class="text-gray-600">Успешных выпускников</div>
+                    </div>
+                    <div class="stat-card bg-orange-50 p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-orange-600 mb-2">50+</div>
+                        <div class="text-gray-600">Экспертов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Наша миссия -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Наша миссия и ценности</h2>
+                        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                            Мы верим, что качественное образование должно быть доступно каждому, независимо от возраста, местоположения или финансовых возможностей
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <div class="feature-icon w-14 h-14 rounded-lg flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white text-2xl mb-4">
+                                🎯
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Наша миссия</h3>
+                            <p class="text-gray-600">
+                                Сделать качественное образование доступным для всех, предоставляя современные, практико-ориентированные курсы, которые помогают людям развивать навыки, необходимые для успешной карьеры в цифровую эпоху.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <div class="feature-icon w-14 h-14 rounded-lg flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white text-2xl mb-4">
+                                👁️
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">Наше видение</h3>
+                            <p class="text-gray-600">
+                                Стать ведущей образовательной платформой, которая трансформирует традиционное обучение, объединяя лучших экспертов, современные технологии и индивидуальный подход к каждому студенту.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Наши преимущества -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Почему выбирают нас</h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                        Мы создали платформу, которая действительно работает на результат наших студентов
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl mb-4">
+                            💰
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Доступные цены</h3>
+                        <p class="text-gray-600 text-sm">Качественное образование по разумной стоимости с гибкой системой оплаты</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mb-4">
+                            🛠️
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Практические навыки</h3>
+                        <p class="text-gray-600 text-sm">Фокус на реальных кейсах и проектах, которые пригодятся в работе</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-16 h-16 mx-auto bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-2xl mb-4">
+                            ⏱️
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Гибкий график</h3>
+                        <p class="text-gray-600 text-sm">Учитесь в удобное время в своем темпе без привязки к месту</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-16 h-16 mx-auto bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-4">
+                            🤝
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Поддержка</h3>
+                        <p class="text-gray-600 text-sm">Помощь кураторов и сообщество выпускников после окончания курса</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Наша команда -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Наша команда</h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                        Профессионалы с многолетним опытом в образовании и технологиях
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="team-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <div class="text-6xl text-white">👨‍💼</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-1">Иван Иванов</h3>
+                            <p class="text-blue-600 font-medium mb-3">Основатель и CEO</p>
+                            <p class="text-gray-600 text-sm">
+                                Более 10 лет в сфере EdTech. Основал платформу с целью сделать качественное образование доступным для всех.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
+                            <div class="text-6xl text-white">👨‍💻</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-1">Петр Петров</h3>
+                            <p class="text-green-600 font-medium mb-3">Технический директор</p>
+                            <p class="text-gray-600 text-sm">
+                                Разрабатывает технологическую инфраструктуру платформы. Эксперт в области веб-разработки и UX/UI.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                            <div class="text-6xl text-white">👩‍🏫</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-1">Анна Сидорова</h3>
+                            <p class="text-purple-600 font-medium mb-3">Главный методист</p>
+                            <p class="text-gray-600 text-sm">
+                                Создает образовательные программы и курирует преподавателей. Кандидат педагогических наук.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">Готовы начать обучение?</h2>
+                <p class="text-xl max-w-2xl mx-auto mb-8 opacity-90">
+                    Присоединяйтесь к тысячам студентов, которые уже изменили свою карьеру с помощью наших курсов
+                </p>
+                <a href="new-application.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-50 transition duration-300 inline-block">
+                    Выбрать курс
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <custom-footer></custom-footer>
+    
+    <script src="pocketbase.js"></script>
+    <script>
+        // Функция для проверки авторизации и обновления интерфейса
+        function updateAuthUI() {
+            const authSection = document.getElementById('authSection');
+            const isLoggedIn = window.pb ? pb.isLoggedIn() : false;
+            const currentUser = window.pb ? pb.getCurrentUser() : null;
+            const isAdmin = currentUser && currentUser.role === 'admine';
+
+            if (isLoggedIn) {
+                authSection.innerHTML = `
+                    <div class="user-menu flex items-center space-x-4">
+                        ${isAdmin ? 
+                            `<a href="http://127.0.0.1:8090/_/" target="_blank" class="admin-link flex items-center text-red-600 border border-red-600 px-3 py-1 rounded-lg hover:bg-red-50">
+                                <i data-feather="settings" class="w-4 h-4 mr-1"></i>
+                                Админка
+                            </a>` : 
+                            `<a href="applications.html" class="profile-link flex items-center text-gray-700 hover:text-blue-600 px-3 py-1 rounded-lg hover:bg-gray-100">
+                                <i data-feather="user" class="w-4 h-4 mr-1"></i>
+                                ${currentUser?.name || currentUser?.username || currentUser?.email || 'Профиль'}
+                            </a>`
+                        }
+                        <button onclick="logout()" class="auth-button login border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 font-medium">
+                            Выйти
+                        </button>
+                    </div>
+                `;
+            } else {
+                authSection.innerHTML = `
+                    <a href="login.html" class="auth-button login border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 font-medium">Вход</a>
+                    <a href="register.html" class="auth-button register bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium">Регистрация</a>
+                `;
+            }
+
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+        }
+
+        // Функция выхода
+        function logout() {
+            if (window.pb) {
+                pb.logout();
+            }
+            window.location.href = 'index.html';
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.pb && typeof window.pb.init === 'function') {
+                pb.init().then(() => {
+                    updateAuthUI();
+                });
+            } else {
+                updateAuthUI();
+            }
+
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+        });
+    </script>
+</body>
+</html>
